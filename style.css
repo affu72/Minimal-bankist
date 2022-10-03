@@ -1,0 +1,308 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #444;
+  background-color: #eeee;
+  padding: 10px;
+  height: 100vh;
+}
+
+label {
+  margin: 0;
+}
+
+button {
+  border: none;
+}
+
+.main-header {
+  padding: 0 32px;
+  margin: 0;
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 46px;
+  width: 46px;
+}
+
+.login-action-input input {
+  margin: 0;
+  padding: 6px 24px;
+  width: 130px;
+  font-size: 16px;
+  border-radius: 16px;
+  text-align: center;
+  border: 0;
+}
+
+input:focus {
+  outline: 1px solid #e7e7e7;
+}
+
+p {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.login-action-input {
+  position: relative;
+  display: flex;
+  gap: 10px;
+}
+
+.right-arrow {
+  width: 24px;
+  text-align: center;
+}
+
+.right-arrow:hover {
+  cursor: pointer;
+}
+
+/* main applicatipn */
+.app {
+  max-width: 120rem;
+  margin: 40px auto;
+
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  grid-template-rows: auto repeat(3, 15rem) auto;
+
+  gap: 20px;
+  opacity: 0;
+
+  transition: all 1s;
+  padding: 20px 0;
+}
+
+.balance {
+  grid-column: 1 / span 2;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.balance-label {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: -0.2rem;
+}
+
+.date-label {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.balance-value {
+  letter-spacing: -1px;
+  font-weight: 400;
+  font-size: 43px;
+}
+
+/* movements */
+
+.section-movement {
+  grid-row: 2 / span 3;
+  background-color: white;
+  border-radius: 10px;
+  overflow: auto;
+}
+
+.movement-row {
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.movement-type {
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-right: 20px;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.movement-value {
+  margin-left: auto;
+  font-size: 24px;
+}
+
+.movement-date {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.deposit {
+  background-color: rgb(61, 230, 126);
+}
+
+/* actions */
+
+.action {
+  border-radius: 10px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.action > p {
+  margin-left: 36px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.action form {
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  justify-content: center;
+  justify-items: center;
+  column-gap: 12px;
+}
+
+.form label {
+  justify-self: start;
+  margin-left: 6px;
+  margin-top: 2px;
+
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.action input {
+  width: 120px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  text-align: center;
+}
+
+.form button {
+  justify-self: start;
+  background: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: none;
+}
+
+.loan--form {
+  position: relative;
+}
+
+.loan--form label {
+  position: absolute;
+  bottom: -22px;
+  left: 32px;
+}
+
+.section-transfer {
+  background: linear-gradient(
+    90deg,
+    hsla(49, 96%, 48%, 1) 67%,
+    hsla(52, 100%, 48%, 1) 100%
+  );
+}
+
+.movement-type-deposit,
+.section-loan {
+  background: linear-gradient(
+    135deg,
+    rgb(54, 201, 56) 0%,
+    hsla(143, 77%, 57%, 1) 96%
+  );
+}
+
+.movement-type-withdrawal,
+.section-close {
+  background: linear-gradient(
+    90deg,
+    rgb(237, 19, 117) 62%,
+    hsla(339, 100%, 55%, 1) 100%
+  );
+}
+
+.section-summary {
+  max-width: 120rem;
+  grid-column: 1 / -1;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summary {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+
+  /* align-self: end; */
+  flex-basis: 55%;
+  flex-shrink: 0;
+  /* flex-grow: 0.1; */
+}
+
+.summary div {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.in-value,
+.out-value,
+.interest-value {
+  font-size: 24px;
+  letter-spacing: -0.5px;
+  color: rgb(43, 212, 74);
+
+  font-weight: 400;
+}
+
+.out-value {
+  color: crimson;
+}
+
+.sort {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sort button {
+  border: none;
+}
+
+.logout-time {
+  font-size: 16px;
+}
+
+/* span .invalid {
+  position: absolute;
+  top: 0;
+} 
+*/
+
+.user-first-name {
+  font-size: 24px;
+  color: rgb(0, 187, 120);
+}

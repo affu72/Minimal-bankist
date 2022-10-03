@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>bankist</title>
+</head>
+
+<body>
+  <nav class="main-header">
+    <p class="welcome">Log in to get started</p>
+    <a href="#"><img src="logo.svg" alt="3 circle venn diagram" class="logo"></a>
+    <form class="login-action-input">
+      <input class="username" type="text" placeholder="user">
+      <input class="pin" type="password" placeholder="PIN">
+      <button>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="right-arrow login-btn">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+        </svg>
+      </button>
+
+    </form>
+  </nav>
+
+  <main class="app">
+    <section class="balance">
+      <div>
+        <p class="balance-label">Current balance</p>
+        <p class="date-label">As of <span class="date">05/03/2037</span></p>
+      </div>
+      <p class="balance-value">0000&euro;</p>
+    </section>
+
+    <section class="section-movement">
+      <div class="movement-row">
+        <div class="movement-type movement-type- deposit">deposit</div>
+        <div class="movement-date">24/01/2037</div>
+        <div class="movement-value">4000</div>
+      </div>
+
+    </section>
+
+    <!-- tranfer money  -->
+    <section class="action section-transfer">
+      <p>Transfer money</p>
+      <form class="transfer--form form">
+        <input class="input-transfer-to" type="text">
+        <input class="input-transfer-value" type="number">
+        <button class="btn-transfer" type="button">&xrarr;</button>
+        <label for="">Transfer to</label>
+        <label for="">Amount</label>
+      </form>
+    </section>
+
+    <!-- request loan -->
+    <section class="action section-loan">
+      <p>Request Loan</p>
+      <form class="loan--form form">
+        <input class="input-loan" type="number">
+        <button class="request-loan-btn" type="button">&xrarr;</button>
+        <label for="">Amount</label>
+      </form>
+
+
+    </section>
+
+    <!-- close account -->
+    <section class="action section-close">
+      <p>Close acoount</p>
+      <form class="close-form form">
+        <input class="username-close-account" type="text">
+        <input class="pin-close-account" type="number">
+        <button class="close-account-btn" type="button">&xrarr;</button>
+        <label for="">Confirm user</label>
+        <label for="">Confirm pin</label>
+    </section>
+
+    <section class="section-summary">
+      <div class="summary">
+        <div>in <span class="in-value">0000</span></div>
+        <div>out <span class="out-value">0000€</span></div>
+        <div>interest <span class="interest-value">0000€</span></div>
+        <div class="sort">
+          <button class="sort-btn">&downarrow;</button>
+          <span>sort</span>
+        </div>
+      </div>
+      <div class="logout-time">You will be logged out in <span class="time"></span></div>
+    </section>
+
+  </main>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
