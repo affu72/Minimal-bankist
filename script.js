@@ -27,6 +27,9 @@ const closeAccPin = document.querySelector(".pin-close-account");
 const dateLabel = document.querySelector(".date");
 
 const timeLabel = document.querySelector(".time");
+const noteContainer = document.querySelector(".note-container");
+
+const logOut = document.querySelector(".logout");
 
 const account1 = {
   owner: "Afzal Nomani",
@@ -49,11 +52,11 @@ const account1 = {
   currency: "INR",
 };
 
-const account2 = {
+const account4 = {
   owner: "Parveen Sultana",
   movements: [5000, 235, -845, 8000, -700, -130, 70, 1300],
   interestRate: 1.5, // %
-  pin: 2222,
+  pin: 4444,
 
   movementsDate: [
     "2020-12-25T04:42:00.000Z",
@@ -74,7 +77,7 @@ const account3 = {
   owner: "Imran Ahmad",
   movements: [10, 20, -400, -3000, 650, -130, 70, 400],
   interestRate: 1.2, // %
-  pin: 3333,
+  pin: 2222,
   movementsDate: [
     "2020-11-09T06:34:16.000Z",
     "2020-08-29T12:09:16.000Z",
@@ -85,11 +88,11 @@ const account3 = {
     "2020-03-13T21:45:08.000Z",
     "2020-02-29T20:22:18.000Z",
   ],
-  locale: "ar-SA",
-  currency: "AED",
+  locale: "en-US",
+  currency: "USD",
 };
 
-const account4 = {
+const account2 = {
   owner: "Parvez Alam Khan",
   movements: [426, 985, -400, 658, -231, -28, 70, 472],
   interestRate: 1.8, // %
@@ -275,6 +278,17 @@ const updateUI = function (currentAccount) {
 
 /********** EVENT HANDLER  *********/
 
+const actionLogOut = function (e) {
+  e.preventDefault();
+  mainApp.style.opacity = 0;
+  labelWelcome.textContent = "Log in to get started";
+  logOut.classList.add("hidden");
+  loginAction.classList.remove("hidden");
+  noteContainer.classList.remove("hidden");
+};
+
+logOut.addEventListener("click", actionLogOut);
+
 let currentAccount, timer;
 
 const StartLogOutTimer = function () {
@@ -287,8 +301,7 @@ const StartLogOutTimer = function () {
     timeLabel.textContent = `${min}:${sec} min`;
 
     if (t === 0) {
-      mainApp.style.opacity = 0;
-      labelWelcome.textContent = "Log in to get started";
+      actionLogOut();
       clearInterval(timer);
     }
     t--;
@@ -345,6 +358,10 @@ loginBtn.addEventListener("click", function (e) {
     inputPin.blur();
 
     updateUI(currentAccount);
+
+    noteContainer.classList.add("hidden");
+    loginAction.classList.add("hidden");
+    logOut.classList.remove("hidden");
   }
   // clear input fileds
   inputUsername.value = inputPin.value = "";
@@ -438,6 +455,20 @@ sortMovementsBtn.addEventListener("click", function (e) {
   }
   // updateUI(currentAccount);
 });
+
+const userDetail = document.querySelector(".display-user");
+
+// accounts.forEach((acc, i) => {
+//   if (i != 3) {
+//     const html = `<div class="user${i + 1}">
+//     <div class="owner">${acc.owner}</div>
+//     <div class="username">${acc.username}</div>
+//     <div class="pin">${acc.pin}</div>
+//   </div>`;
+
+//     userDetail.insertAdjacentHTML("afterbegin", html);
+//   }
+// });
 
 /******* MAP Method ******
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
