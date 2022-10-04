@@ -371,7 +371,7 @@ p {
 .display-user {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-left: 105px;
+  margin-left: 124px;
 
   font-size: 16px;
 }
