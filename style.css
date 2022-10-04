@@ -349,6 +349,7 @@ p {
   border-bottom: 1px solid grey;
   padding-bottom: 10px;
   font-weight: 500;
+  font-size:18px;
 }
 
 .how-to-login::first-letter {
@@ -369,18 +370,18 @@ p {
 .display-user {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-left: 145px;
+  margin-left: 105px;
 
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .table-label {
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
 
   display: flex;
-  gap: 140px;
+  gap: 90px;
 
-  margin-left: 100px;
+  margin-left: 65px;
 }
