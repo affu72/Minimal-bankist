@@ -81,7 +81,7 @@ p {
 
 /* main applicatipn */
 .app {
-  max-width: 100rem;
+  max-width: 110rem;
   margin: 40px auto;
 
   display: grid;
@@ -326,6 +326,7 @@ p {
 
 .logout-btn {
   background-color: rgb(237, 19, 117);
+  padding 6px 12px;
 }
 
 .note-container {
