@@ -327,6 +327,7 @@ p {
 .logout-btn {
   background-color: rgb(237, 19, 117);
   padding:6px 12px;
+  border-radius:6px;
 }
 
 .note-container {
