@@ -107,8 +107,8 @@ const account2 = {
     "2020-01-31T02:18:56.000Z",
     "2022-01-10T01:20:31.000Z",
   ],
-  locale: "ar-OM",
-  currency: "OMR",
+  locale: "en-US",
+  currency: "USD",
 };
 
 const accounts = [account1, account2, account3, account4];
