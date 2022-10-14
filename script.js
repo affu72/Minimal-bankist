@@ -93,7 +93,7 @@ const account3 = {
 };
 
 const account2 = {
-  owner: "Parvez Alam Khan",
+  owner: "Parvez Khan",
   movements: [426, 985, -400, 658, -231, -28, 70, 472],
   interestRate: 1.8, // %
   pin: 4444,
